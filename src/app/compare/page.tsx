@@ -3,6 +3,19 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+type Car = {
+  _id: string;
+  make: string;
+  model: string;
+  year: number;
+  body_type: string;
+  thumbnail: string;
+  images: string[];
+  variants: { name: string; price_inr: number; fuel: string; transmission: string; mileage: number }[];
+};
+
+type CompareResp = { left: Car; right: Car; ai_summary: string };
+
 type CompareResp = { left: Car; right: Car; ai_summary: string };
 export default function ComparePage() {
   const sp = useSearchParams();
