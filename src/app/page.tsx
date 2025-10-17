@@ -44,11 +44,19 @@ export default function Home() {
             <h2 className="text-xl font-semibold mt-3">{c.make} {c.model}</h2>
             <p className="text-sm text-gray-600">{c.year} · {c.body_type}</p>
 
+
+
             <div className="mt-3 space-y-2">
               {c.variants.map((v) => (
                 <div key={v.name} className="flex justify-between text-sm">
-                  <span>{v.name} ({v.fuel}, {v.transmission})</span>
-                  <span className="text-gray-800 font-semibold">₹{v.price_inr.toLocaleString("en-IN")}</span>
+                  {/*  dark grey label  */}
+                  <span className="text-gray-700">
+                    {v.name} ({v.fuel}, {v.transmission})
+                  </span>
+                  {/*  bold dark price  */}
+                  <span className="text-gray-900 font-semibold">
+                    ₹{v.price_inr.toLocaleString("en-IN")}
+                  </span>
                 </div>
               ))}
             </div>
