@@ -16,7 +16,7 @@ type Car = {
 
 type CompareResp = { left: Car; right: Car; ai_summary: string };
 
-type CompareResp = { left: Car; right: Car; ai_summary: string };
+
 export default function ComparePage() {
   const sp = useSearchParams();
   const [data, setData] = useState<CompareResp | null>(null);
