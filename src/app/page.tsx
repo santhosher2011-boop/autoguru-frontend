@@ -48,7 +48,7 @@ export default function Home() {
               {c.variants.map((v) => (
                 <div key={v.name} className="flex justify-between text-sm">
                   <span>{v.name} ({v.fuel}, {v.transmission})</span>
-                  <span className="font-semibold">₹{v.price_inr.toLocaleString("en-IN")}</span>
+                  <span className="text-gray-800 font-semibold">₹{v.price_inr.toLocaleString("en-IN")}</span>
                 </div>
               ))}
             </div>
